@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 class _MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
       children: <Widget>[
         Container(
           width: 50,
@@ -48,8 +48,8 @@ class _MyApp extends StatelessWidget{
           color: Colors.green,
         ),
         Container(
-          width: 10000,
-          height: 10,
+          width: 10,
+          height: 10000,
           color: Colors.black,
         )
       ],
