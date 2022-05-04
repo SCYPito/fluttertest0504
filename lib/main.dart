@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,37 +26,34 @@ class MyApp extends StatelessWidget {
 class _MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Container(
-          width: 50,
-          height: 50,
-          color: Colors.red,
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Container example"),
+          leading: Icon(FontAwesomeIcons.dragon),
         ),
-        Container(
-          width: 50,
-          height: 50,
+        body: Container(
+          transform: Matrix4.rotationZ(0.1),
           color: Colors.blue,
-        ),
-        Container(
-          width: 50,
-          height: 50,
-          color: Colors.yellow,
-        ),
-        Container(
-          width: 50,
-          height: 50,
-          color: Colors.green,
-        ),
-        Container(
-          width: 10,
-          height: 10000,
-          color: Colors.black,
+          padding: EdgeInsets.all(50.0),
+          child: Container(
+            transform: Matrix4.rotationZ(-0.2),
+            constraints: BoxConstraints.expand(),
+            color: Colors.deepOrange,
+            child: Center(child: Text('Hello Flutter', style: TextStyle(fontSize: 60.0),)),
+          ),
         )
-      ],
     );
   }
 }
+
+/*
+添加Package到Flutter專案中
+雖然開頭說要詳細說明，不過安裝使用Package的步驟實在太簡單了，只要三個步驟。
+
+開啟pubspec.yaml檔案，在dependencies處添加你所需的Package。
+使用Terminal執行flutter pub get，或是點選工具列會顯示的「Packages get」按鈕來安裝Package。
+在Dart Code裡面使用import 'package:....'來進行引用後就可以使用囉。
+*/
 
 /*
 lib：平常撰寫的dart語言程式碼都會放在這裡，這個資料夾也可以說是Flutter “核心工作資料夾”
