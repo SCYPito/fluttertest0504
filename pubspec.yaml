@@ -31,18 +31,28 @@ dependencies:
     sdk: flutter
 
 
+  flare_splash_screen: ^4.0.0
+  #Flare是一个強大的設計和動畫製作工具，輸出的副檔名就是flr，Flutter中有許多Widget可以支援撥放flr動畫。
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+
+  cloud_firestore: ^3.1.14
+  firebase_auth: ^3.3.17
+  google_sign_in: ^5.3.1
+  flutter_bloc: ^8.0.1
+  equatable: ^2.0.3
+  meta: ^1.1.6
+  font_awesome_flutter: ^10.1.0
+  flutter_auth_buttons: ^0.10.0
+  # flutter pub upgrade --major-versions 解決升級問題。
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
    # The following adds the Cupertino Icons font to your application.
    # Use with the CupertinoIcons class for iOS style icons.
-
-   #font awesome icon 這行是新加的
-  font_awesome_flutter: 8.2.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -57,10 +67,19 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+
+
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+
+
+  assets:
+    - asstes/
+  #新增 此段程式碼 再執行Packages get 下載Package。
 
   # To add assets to your application, add an assets section, like this:
   # assets:

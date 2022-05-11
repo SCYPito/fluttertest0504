@@ -1,50 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-void main() {
-  runApp(const MyApp());
-}
+import 'splash_page.dart';
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Color'),
-        ),
-        body: _MyApp(),
+      title: 'FlutTube',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false, // 去除右上方Debug標誌
+      home: SplashPage(),
     );
   }
 }
 
+/*
+系統會說找不到splash_page.dart檔案，所以新增splash_page.dart和login_page.dart
 
-class _MyApp extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("Container example"),
-          leading: Icon(FontAwesomeIcons.dragon),
-        ),
-        body: Container(
-          transform: Matrix4.rotationZ(0.1),
-          color: Colors.blue,
-          padding: EdgeInsets.all(50.0),
-          child: Container(
-            transform: Matrix4.rotationZ(-0.2),
-            constraints: BoxConstraints.expand(),
-            color: Colors.deepOrange,
-            child: Center(child: Text('Hello Flutter', style: TextStyle(fontSize: 60.0),)),
-          ),
-        )
-    );
-  }
-}
+
+
+*/
+
+
+
+
+
+
 
 /*
 添加Package到Flutter專案中
